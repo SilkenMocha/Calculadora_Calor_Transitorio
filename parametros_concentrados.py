@@ -19,7 +19,7 @@ def parametros_concentrados():
         st.subheader('Constantes')
         k = st.number_input('Valor de k: ', value= 0.627)
         w = st.number_input('Valor de w: ', value= 1200)
-        alpha = st.number_input('Valor de α: ', format="%.6f", step = 1e-6, value= 0.151E-6)
+        alpha = st.number_input('Valor de α: ', format="%.9f", step = 1e-8, value= 0.151E-6)
         
         #Propiedades físicas#
         st.subheader('Propiedades físicas')
