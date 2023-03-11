@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 #___________________________________
-#import biseccion as bs
+import parametros_concentrados as pc
 #import newton as nw
 #import secante as sc
 #import regulafalsi as fp
@@ -25,8 +25,8 @@ seleccion = st.selectbox("Seleccione una opción: ", ["Parámetros Concentrados"
 
 if seleccion == "Parámetros Concentrados": 
     st.subheader("Parámetros Concentrados")
-    st.latex('''x^3 - 6x^2 + 11x -6.1''')
-    #bs.biseccion()
+    #st.latex('''x^3 - 6x^2 + 11x -6.1''')
+    pc.parametros_concentrados()
 
 if seleccion == "Placa": 
     st.subheader("Placa")
@@ -40,23 +40,23 @@ if seleccion == "Placa":
 
 if seleccion == "Cilindro": 
     st.subheader("Cilindro")
-    st.latex('''x^3 - 6x^2 + 11x -6.1''')
+    #st.latex('''x^3 - 6x^2 + 11x -6.1''')
     #sc.secante()
 
 if seleccion == "Esfera": 
     st.subheader("Esfera")
-    st.latex('''x^3 - 6x^2 + 11x -6.1''')
+    #st.latex('''x^3 - 6x^2 + 11x -6.1''')
     #fp.regulafalsi()
 
 if seleccion == "Sólido Semiinfinito": 
     st.subheader("Sólido Semiinfinito")
-    with col1:
+    #with col1:
         st.latex('''x + y = 1''')
-    with col2:
+    #with col2:
         st.latex('''x + 5y = 10''')
         
-    A = np.array([ [1,1], [1,5]])
-    b = np.array([1,10])
+    #A = np.array([ [1,1], [1,5]])
+    #b = np.array([1,10])
 
     #cr.cramer(A,b)
     
