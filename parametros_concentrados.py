@@ -31,7 +31,7 @@ def parametros_concentrados():
         Cp = st.number_input('Valor de Cp: (J/kg K)', value= 4180)
         d = st.number_input('Valor de densidad: (kg/m^3)', value= 3)
         
-        if geometria == 'pared':
+        if geometria == 'Pared':
             L = st.number_input('Longuitud de pared: ', value= 5)
         
         if geometria == 'Cilindro':
