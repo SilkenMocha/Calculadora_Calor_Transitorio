@@ -6,6 +6,11 @@ import numpy as np
 
 def parametros_concentrados():
 
+    geometria = st.radio(
+        "Geometria del problema",
+        ('Pared', 'Cilindro', 'Esfera'))
+
+
     with st.form(key='calc_parametros_concentrados'):
         #Valores de temperatura#
         st.subheader('Valores de temperatura')
@@ -26,7 +31,17 @@ def parametros_concentrados():
         Cp = st.number_input('Valor de Cp: (J/kg K)', value= 4180)
         d = st.number_input('Valor de densidad: (kg/m^3)', value= 3)
         
+        if geometria == 'pared':
+            L = st.number_input('Longuitud de pared: ', value= 5)
         
+        if geometria == 'Cilindro':
+            r = st.number_input('Radio del cilindro: ', value= 5)
+            h_c = st.number_input('Altura del cilindro: ', value= 5)
+        if geometria == 'Esfera':
+            r = st.number_input('Radio de la esfera: ', value= 5)
+
         #tol = st.number_input('Tolerancia: ', format="%.4f", step = 1e-4, value = 0.001 )
         #n0 = st.number_input('Iteraciones: ', value = 100)
         calcular = st.form_submit_button('Calcular')
+
+    
