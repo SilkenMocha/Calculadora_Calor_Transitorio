@@ -51,9 +51,9 @@ if seleccion == "Esfera":
 if seleccion == "Sólido Semiinfinito": 
     st.subheader("Sólido Semiinfinito")
     #with col1:
-        st.latex('''x + y = 1''')
+        #st.latex('''x + y = 1''')
     #with col2:
-        st.latex('''x + 5y = 10''')
+        #st.latex('''x + 5y = 10''')
         
     #A = np.array([ [1,1], [1,5]])
     #b = np.array([1,10])
