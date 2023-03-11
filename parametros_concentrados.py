@@ -45,3 +45,4 @@ def parametros_concentrados():
         calcular = st.form_submit_button('Calcular')
 
     
+#Meter longuitud caracteristica en vez de areas y volumenes#
