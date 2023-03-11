@@ -29,4 +29,4 @@ def parametros_concentrados():
         
         #tol = st.number_input('Tolerancia: ', format="%.4f", step = 1e-4, value = 0.001 )
         #n0 = st.number_input('Iteraciones: ', value = 100)
-        #calcular = st.form_submit_button('Calcular')
+        calcular = st.form_submit_button('Calcular')
