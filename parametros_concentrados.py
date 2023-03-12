@@ -53,7 +53,7 @@ def parametros_concentrados():
     if geometria == 'Pared':
         Lc = L
         b = h/(d*Cp*Lc)
-        t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
+        t = (-1/b)* math.log((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
 
     #Energia absorbida#
@@ -64,7 +64,7 @@ def parametros_concentrados():
     if geometria == 'Cilindro':
         Lc = r/2
         b = h/(d*Cp*Lc)
-        t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
+        t = (-1/b)* math.log((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
 
     #Energia absorbida#
@@ -79,7 +79,7 @@ def parametros_concentrados():
         st.subheader("tiempo: " + str(t))
     
     #Energia absorbida#
-        V_esfera = (math.pi*(r^2))/3
+        V_esfera = (4*math.pi*(r^2))/3
         Q = d*V_esfera*Cp*(T_t-T0)
         st.subheader("Energia absorbida: " + str(Q))
 
