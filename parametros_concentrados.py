@@ -23,7 +23,7 @@ def parametros_concentrados():
         #Constantes#
         st.subheader('Constantes')
         k = st.number_input('Valor de k: ', value= 0.627)
-        w = st.number_input('Valor de w: ', value= 1200)
+        h = st.number_input('Valor de h: ', value= 1200)
         alpha = st.number_input('Valor de α: ', format="%.9f", step = 1e-8, value= 0.151E-6)
         
         #Propiedades físicas#
@@ -36,13 +36,21 @@ def parametros_concentrados():
         
         if geometria == 'Cilindro':
             r = st.number_input('Radio del cilindro: ', value= 5)
-            h_c = st.number_input('Altura del cilindro: ', value= 5)
+    
         if geometria == 'Esfera':
             r = st.number_input('Radio de la esfera: ', value= 5)
 
         #tol = st.number_input('Tolerancia: ', format="%.4f", step = 1e-4, value = 0.001 )
         #n0 = st.number_input('Iteraciones: ', value = 100)
         calcular = st.form_submit_button('Calcular')
-
     
+    if geometria == 'Pared':
+        Lc = L
+        b = h/
+
+    if geometria == 'Pared':
+        Lc = r/2
+
+    if geometria == 'Pared':
+        Lc = r/3            
 #Meter longuitud caracteristica en vez de areas y volumenes#
