@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 #___________________________________
 import parametros_concentrados as pc
-#import newton as nw
+import placa as pl
 #import secante as sc
 #import regulafalsi as fp
 #import cramer as cr
@@ -25,18 +25,11 @@ seleccion = st.selectbox("Seleccione una opción: ", ["Parámetros Concentrados"
 
 if seleccion == "Parámetros Concentrados": 
     st.subheader("Parámetros Concentrados")
-    #st.latex('''x^3 - 6x^2 + 11x -6.1''')
     pc.parametros_concentrados()
 
 if seleccion == "Placa": 
     st.subheader("Placa")
-    col1, col2 = st.columns(2)
-    with col1:
-        st.latex('''x^3 - 6x^2 + 11x -6.1''')
-    
-    with col2:
-        st.latex('''\dfrac {\mathrm{d}}{\mathrm{d} x}= 3x^2-12x+11''')
-    #nw.newton()
+    pl.placa()
 
 if seleccion == "Cilindro": 
     st.subheader("Cilindro")
