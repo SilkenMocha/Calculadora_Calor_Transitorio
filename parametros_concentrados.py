@@ -68,7 +68,7 @@ def parametros_concentrados():
         st.subheader("tiempo: " + str(t))
 
     #Energia absorbida#
-        V_cilindro = (math.pi*(r^2))*ht
+        V_cilindro = (math.pi*(r**2))*ht
         Q = d*V_esfera*Cp*(T_t-T0)
         st.subheader("Energia absorbida: " + str(Q))    
 
@@ -79,7 +79,7 @@ def parametros_concentrados():
         st.subheader("tiempo: " + str(t))
     
     #Energia absorbida#
-        V_esfera = (4*math.pi*(r^2))/3
+        V_esfera = (4*math.pi*(r**2))/3
         Q = d*V_esfera*Cp*(T_t-T0)
         st.subheader("Energia absorbida: " + str(Q))
 
