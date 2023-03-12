@@ -83,4 +83,8 @@ def parametros_concentrados():
         Q = d*V_esfera*Cp*(T_t-T0)
         st.subheader("Energia absorbida: " + str(Q))
         st.write("Volumen" + str(V_esfera))
-
+        
+        col1, col2= st.columns(2)
+        col1.metric("tiempo", str(t))
+        col2.metric("Energia absorbida", str(Q))
+        
