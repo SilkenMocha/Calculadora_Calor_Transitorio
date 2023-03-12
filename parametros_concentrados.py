@@ -49,8 +49,9 @@ def parametros_concentrados():
         #n0 = st.number_input('Iteraciones: ', value = 100)
         calcular = st.form_submit_button('Calcular')
     
-    #tiempo#
+    
     if geometria == 'Pared':
+    #tiempo#    
         Lc = L
         b = h/(d*Cp*Lc)
         t = (-1/b)* math.log((T_t-Tinf)/(T0-Tinf))
@@ -59,9 +60,13 @@ def parametros_concentrados():
     #Energia absorbida#
         Q = d*V_pared*Cp*(T_t-T0)
         st.subheader("tiempo: " + str(Q))
-
+        
+        col1, col2= st.columns(2)
+        col1.metric("Tiempo", str(round(t,4)))
+        col2.metric("Energia absorbida", str(round(Q,4)))
 
     if geometria == 'Cilindro':
+    #tiempo#
         Lc = r/2
         b = h/(d*Cp*Lc)
         t = (-1/b)* math.log((T_t-Tinf)/(T0-Tinf))
@@ -70,19 +75,21 @@ def parametros_concentrados():
     #Energia absorbida#
         V_cilindro = (math.pi*(r**2))*ht
         Q = d*V_esfera*Cp*(T_t-T0)
-        st.subheader("Energia absorbida: " + str(Q))    
+        st.subheader("Energia absorbida: " + str(Q))
+        
+        col1, col2= st.columns(2)
+        col1.metric("Tiempo", str(round(t,4)))
+        col2.metric("Energia absorbida", str(round(Q,4)))            
 
     if geometria == 'Esfera':
+    #tiempo#
         Lc = r/3            
         b = h/(d*Cp*Lc)
         t = (-1/b)* math.log((T_t-Tinf)/(T0-Tinf))
-        st.subheader("tiempo: " + str(t))
     
     #Energia absorbida#
         V_esfera = (4/3)*(math.pi*(r**3))
         Q = d*V_esfera*Cp*(T_t-T0)
-        st.subheader("Energia absorbida: " + str(Q))
-        st.write("Volumen" + str(V_esfera))
         
         col1, col2= st.columns(2)
         col1.metric("Tiempo", str(round(t,4)))
