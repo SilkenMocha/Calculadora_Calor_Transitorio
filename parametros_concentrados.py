@@ -74,7 +74,7 @@ def parametros_concentrados():
 
     #Energia absorbida#
         V_cilindro = (math.pi*(r**2))*ht
-        Q = d*V_esfera*Cp*(T_t-T0)
+        Q = d*V_cilindro*Cp*(T_t-T0)
         st.subheader("Energia absorbida: " + str(Q))
         
         col1, col2= st.columns(2)
