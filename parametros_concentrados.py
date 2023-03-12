@@ -23,7 +23,7 @@ def parametros_concentrados():
 
         #Constantes#
         st.subheader('Constantes')
-        k = st.number_input('Valor de k: ', value= 0.627)
+        k = st.number_input('Valor de k: ', format="%.4f", step = 1e-4, value= 0.627)
         h = st.number_input('Valor de h: ', value= 1200)
         alpha = st.number_input('Valor de α: ', format="%.9f", step = 1e-8, value= 0.151E-6)
         
@@ -33,13 +33,13 @@ def parametros_concentrados():
         d = st.number_input('Valor de densidad: (kg/m^3)', value= 994)
         
         if geometria == 'Pared':
-            L = st.number_input('Longuitud de pared: ', value= 0.025)
+            L = st.number_input('Longuitud de pared: ', format="%.4f", step = 1e-3, value= 0.025)
         
         if geometria == 'Cilindro':
-            r = st.number_input('Radio del cilindro: ', value= 0.025)
+            r = st.number_input('Radio del cilindro: ', format="%.4f", step = 1e-3, value= 0.025)
     
         if geometria == 'Esfera':
-            r = st.number_input('Radio de la esfera: ', value= 0.025)
+            r = st.number_input('Radio de la esfera: ', format="%.4f", step = 1e-3, value= 0.025)
 
         #tol = st.number_input('Tolerancia: ', format="%.4f", step = 1e-4, value = 0.001 )
         #n0 = st.number_input('Iteraciones: ', value = 100)
