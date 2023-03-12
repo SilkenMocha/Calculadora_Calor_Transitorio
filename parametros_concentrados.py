@@ -34,22 +34,32 @@ def parametros_concentrados():
         
         if geometria == 'Pared':
             L = st.number_input('Longuitud de pared: ', format="%.4f", step = 1e-3, value= 0.025)
+            V_pared = st.number_input('Volumen de pared: ', format="%.4f", step = 1e-3, value= 0.025)
+            #m = st.number_input('Masa de pared: (Si hay)', format="%.4f", step = 1e-3, value= 0.025)
         
         if geometria == 'Cilindro':
             r = st.number_input('Radio del cilindro: ', format="%.4f", step = 1e-3, value= 0.025)
-    
+            ht = st.number_input('Altura del cilindro: ', format="%.4f", step = 1e-3, value= 0.5)
+            #m = st.number_input('Masa de pared: (Si hay)', format="%.4f", step = 1e-3, value= 0.025)    
         if geometria == 'Esfera':
             r = st.number_input('Radio de la esfera: ', format="%.4f", step = 1e-3, value= 0.025)
+            #m = st.number_input('Masa de pared: (Si hay)', format="%.4f", step = 1e-3, value= 0.025)            
 
         #tol = st.number_input('Tolerancia: ', format="%.4f", step = 1e-4, value = 0.001 )
         #n0 = st.number_input('Iteraciones: ', value = 100)
         calcular = st.form_submit_button('Calcular')
     
+    #tiempo#
     if geometria == 'Pared':
         Lc = L
         b = h/(d*Cp*Lc)
         t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
+
+    #Energia absorbida#
+        Q = d*V_pared*Cp*(T_t-T0)
+        st.subheader("tiempo: " + str(Q))
+
 
     if geometria == 'Cilindro':
         Lc = r/2
@@ -57,10 +67,19 @@ def parametros_concentrados():
         t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
 
+    #Energia absorbida#
+        V_cilindro = (math.pi*(r^2))*ht
+        Q = d*V_esfera*Cp*(T_t-T0)
+        st.subheader("Energia absorbida: " + str(Q))    
+
     if geometria == 'Esfera':
         Lc = r/3            
         b = h/(d*Cp*Lc)
         t = (-1/b)* math.log((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
+    
+    #Energia absorbida#
+        V_esfera = (4*math.pi*(r^2))/3
+        Q = d*V_esfera*Cp*(T_t-T0)
+        st.subheader("Energia absorbida: " + str(Q))
 
-#Meter longuitud caracteristica en vez de areas y volumenes#
