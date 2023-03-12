@@ -46,11 +46,20 @@ def parametros_concentrados():
     
     if geometria == 'Pared':
         Lc = L
-        b = h/
+        b = h/(d*Cp*Lc)
+        t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
+        st.subheader("tiempo: " + str(t))
 
     if geometria == 'Pared':
         Lc = r/2
+        b = h/(d*Cp*Lc)
+        t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
+        st.subheader("tiempo: " + str(t))
 
     if geometria == 'Pared':
         Lc = r/3            
+        b = h/(d*Cp*Lc)
+        t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
+        st.subheader("tiempo: " + str(t))
+
 #Meter longuitud caracteristica en vez de areas y volumenes#
