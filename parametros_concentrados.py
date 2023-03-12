@@ -29,16 +29,16 @@ def parametros_concentrados():
         #Propiedades físicas#
         st.subheader('Propiedades físicas')
         Cp = st.number_input('Valor de Cp: (J/kg K)', value= 4180)
-        d = st.number_input('Valor de densidad: (kg/m^3)', value= 3)
+        d = st.number_input('Valor de densidad: (kg/m^3)', value= 994)
         
         if geometria == 'Pared':
-            L = st.number_input('Longuitud de pared: ', value= 5)
+            L = st.number_input('Longuitud de pared: ', value= 0.025)
         
         if geometria == 'Cilindro':
-            r = st.number_input('Radio del cilindro: ', value= 5)
+            r = st.number_input('Radio del cilindro: ', value= 0.025)
     
         if geometria == 'Esfera':
-            r = st.number_input('Radio de la esfera: ', value= 5)
+            r = st.number_input('Radio de la esfera: ', value= 0.025)
 
         #tol = st.number_input('Tolerancia: ', format="%.4f", step = 1e-4, value = 0.001 )
         #n0 = st.number_input('Iteraciones: ', value = 100)
