@@ -82,4 +82,5 @@ def parametros_concentrados():
         V_esfera = (4*math.pi*(r**2))/3
         Q = d*V_esfera*Cp*(T_t-T0)
         st.subheader("Energia absorbida: " + str(Q))
+        st.write("Volumen" + str(V_esfera))
 
