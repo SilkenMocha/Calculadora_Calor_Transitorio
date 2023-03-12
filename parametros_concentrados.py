@@ -2,6 +2,7 @@ import math
 import streamlit as st
 import pandas as pd
 import numpy as np
+import math
 
 
 def parametros_concentrados():
@@ -59,7 +60,7 @@ def parametros_concentrados():
     if geometria == 'Esfera':
         Lc = r/3            
         b = h/(d*Cp*Lc)
-        t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
+        t = (-1/b)* math.log((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
 
 #Meter longuitud caracteristica en vez de areas y volumenes#
