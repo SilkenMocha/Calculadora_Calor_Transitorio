@@ -85,6 +85,6 @@ def parametros_concentrados():
         st.write("Volumen" + str(V_esfera))
         
         col1, col2= st.columns(2)
-        col1.metric("Tiempo", str(round(t,2)))
+        col1.metric("Tiempo", str(round(t,4)))
         col2.metric("Energia absorbida", str(round(Q,4)))
         
