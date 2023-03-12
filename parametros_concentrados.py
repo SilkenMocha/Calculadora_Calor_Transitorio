@@ -50,13 +50,13 @@ def parametros_concentrados():
         t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
 
-    if geometria == 'Pared':
+    if geometria == 'Cilindro':
         Lc = r/2
         b = h/(d*Cp*Lc)
         t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
         st.subheader("tiempo: " + str(t))
 
-    if geometria == 'Pared':
+    if geometria == 'Esfera':
         Lc = r/3            
         b = h/(d*Cp*Lc)
         t = (-1/b)* ln((T_t-Tinf)/(T0-Tinf))
